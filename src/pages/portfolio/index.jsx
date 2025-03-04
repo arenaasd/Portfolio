@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header"
 import image1 from "../../images/page1.png"
 import image2 from "../../images/page2.png"
+import { FaFileAlt } from "react-icons/fa";
 import { useState } from 'react'
 import './style.css'
 
@@ -60,7 +61,7 @@ const Portfolio = () => {
         <div className="portfolio">
             <Header
                 title={"Portfolio"}
-                icon={"gg"}
+                icon={<FaFileAlt size={40}/>}
             />
             <div className="portfolio-content">
                 <ul className="filter">

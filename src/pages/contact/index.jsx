@@ -1,6 +1,7 @@
 import React from "react";
 import { Animate } from 'react-simple-animate'
 import Header from "../../components/Header"
+import { MdContactEmergency } from "react-icons/md"
 import './style.css'
 
 const Contact = () => {
@@ -8,7 +9,7 @@ const Contact = () => {
         <div className="contact-me">
             <Header
                 title={"Contact Me"}
-                icon={"gg"}
+                icon={<MdContactEmergency size={40}/>}
             />
             <div className="contact-content">
                 <Animate
