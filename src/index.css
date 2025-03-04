@@ -1,0 +1,32 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --yellow-theme-background-color : #040607;
+  --yellow-theme-text-color : #F0F6F6;
+  --yellow-theme-main-color : #fcab10;
+  --yellow-theme-main2-color : #cf0303;
+  --yellow-theme-nav-color : #090b0f;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html{
+  font-size: 62.5%;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+}
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

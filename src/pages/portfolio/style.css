@@ -1,0 +1,145 @@
+.portfolio-content{
+    padding: 20px;
+    width: 100%;
+}
+.filter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 6px;
+    border-radius: 50px;
+    border: 2px solid var(--yellow-theme-main-color);
+}
+
+.filter li {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    color: var(--yellow-theme-main2-color);
+    text-transform: uppercase;
+    padding: 12px 24px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    border-radius: 25px;
+    min-width: 120px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+.filter li:hover {
+    transform: translateY(-3px);
+}
+.filter .active{
+    background-color: var(--yellow-theme-main-color);
+    color: var(--yellow-theme-main2-color);
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.4s ease-in-out;
+}
+
+.portfolio-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.cards-item{
+    height: 200px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.cards-item:hover .overlay{
+    opacity: 1;
+}
+
+.card-image{
+    height: 100%;
+    border: 1px solid var(--yellow-theme-main-color);
+}
+.card-image a{
+    height: 100%;
+}
+
+.card-image img{
+    height: 100%;
+    object-fit:cover;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: var(--yellow-theme-main-color);
+}
+.overlay div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay div p{
+    color: var(--yellow-theme-main2-color);
+    margin: 0px;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffect 0.8s steps(30,end);
+}
+
+.overlay div button{
+    cursor: pointer;
+    margin-top: 16px;
+    padding: 10px 70px;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--yellow-theme-main2-color);
+    border: 1.5px solid var(--yellow-theme-main2-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+@keyframes typingEffect {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .filter li{
+        font-size: 11px;
+    }
+    .portfolio-cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+    .filter li{
+        font-size: 14px;
+    }
+    .portfolio-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

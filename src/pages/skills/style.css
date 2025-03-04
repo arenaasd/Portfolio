@@ -1,0 +1,92 @@
+body{
+    overflow-y: auto;
+}
+.skills{
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+}
+.skills-content{
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+.inner-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category-text{
+    display: inline-block;
+    color: var(--yellow-theme-main2-color);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--yellow-theme-main-color);
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+.category-text:hover{
+    color: var(--yellow-theme-main-color);
+    transform: scale(1.1);
+    border-bottom: 2px solid var(--yellow-theme-main2-color);
+}
+.category-text:hover::before, 
+.category-text:hover::after {
+    background-color: var(--yellow-theme-main2-color); /* Changes color on hover */
+}
+
+.category-text::before , .category-text::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 5px;
+    background-color: var(--yellow-theme-main-color);
+    bottom: -1px;
+}
+.category-text::before{
+    left: 0;
+}
+.category-text::after{
+    right: 0;
+}
+
+.skills-list{
+    width: 100%;
+}
+.progress-bar-content{
+    padding: 35px 0px 0px 0px;
+    margin: 0;
+    width: 100% !important;
+}
+.progress-bar-content p{
+    font-size: 1.6rem;
+    margin-top: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--yellow-theme-main-color);
+}
+.progress-bar-wrapper {
+    width: 100% !important; 
+    max-width: 100% !important; 
+    display: flex;
+    align-items: center;
+}
+.rc-progress-line {
+    width: 100% !important; /* Ensures equal width */
+    max-width: 100% !important; /* Overrides inline styles */
+}
+
+@media screen and (max-width: 768px) {
+    .skills-content{
+      flex-direction: column;
+      width: 100%;
+    }
+    .progress-bar-content{
+        margin-bottom: 20px;
+    }
+}

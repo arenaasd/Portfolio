@@ -1,0 +1,126 @@
+.contact-content{
+    padding: 20px;
+}
+
+.content-header-text{
+    color: var(--yellow-theme-main2-color);
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--yellow-theme-main-color);
+    transition: transform 0.4s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.content-header-text::before,
+.content-header-text::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 5px;
+    background-color: var(--yellow-theme-main-color);
+    bottom: 0px;
+}
+
+.content-header-text::before{
+    left: 0;
+}
+
+.content-header-text::after{
+    right: 1181px;
+}
+
+.content-header-text:hover::before, 
+.content-header-text:hover::after {
+    background-color: var(--yellow-theme-main2-color); /* Changes color on hover */
+}
+.content-header-text:hover{
+    border-bottom: 2px solid var(--yellow-theme-main2-color);
+    color: var(--yellow-theme-main-color);
+}
+
+.contact-form{
+    margin-top: 40px;
+}
+
+.input-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.input-wrapper div{
+    position: relative;
+}
+.input-wrapper div 
+.input-name, 
+.input-email, 
+.input-description{
+    width: 100%;
+    border: 2px solid var(--yellow-theme-main-color);
+    padding: 16px 12px;
+    transition: all 0.5s ease;
+    position: relative;
+    background-color: transparent;
+    color: var(--yellow-theme-main2-color);
+}
+
+.input-name:focus,
+.input-email:focus,
+.input-description:focus{
+    outline: 1px solid var(--yellow-theme-main2-color);
+}
+
+.input-name:focus + .name-lebal,
+.input-name:valid + .name-lebal,
+.input-email:focus + .email-lebal,
+.input-email:valid + .email-lebal,
+.input-description:focus + .description-lebal,
+.input-description:valid + .description-lebal
+{
+    font-size: 18px;
+    top: -25px;
+    left: 0px;
+}
+
+.name-lebal,
+.email-lebal,
+.description-lebal{
+    font-weight: 500;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    transition: all 0.2s ease;
+    color: var(--yellow-theme-main2-color);
+    font-size: 16px;
+}
+
+.contact-form button{
+    cursor: pointer;
+    padding: 10px 70px;
+    font-size: 2rem;
+    background: transparent;
+    color: var(--yellow-theme-main-color);
+    border: 1.5px solid var(--yellow-theme-main-color);
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.contact-form button:hover{
+    background-color: var(--yellow-theme-main2-color);
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content{
+        text-align: center;
+    }
+    .input-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

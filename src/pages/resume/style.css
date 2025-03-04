@@ -1,0 +1,121 @@
+body {
+    overflow-y: auto;
+}
+
+.resume {
+    height: 100%;
+}
+
+.resume-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.education-container,
+.experience-container {
+    width: 50%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Text Styling */
+.experience-container-header-text,
+.education-container-header-text {
+    display: inline-block;
+    color: var(--yellow-theme-main2-color);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--yellow-theme-main-color);
+    transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.experience-container-header-text:hover,
+.education-container-header-text:hover {
+    color: var(--yellow-theme-main-color);
+    transform: scale(1.1);
+    border-bottom: 2px solid var(--yellow-theme-main2-color);
+}
+
+/* Hover Changes Before & After Color */
+.experience-container-header-text:hover::before,
+.experience-container-header-text:hover::after,
+.education-container-header-text:hover::before,
+.education-container-header-text:hover::after {
+    background-color: var(--yellow-theme-main2-color);
+}
+
+/* Before & After Elements */
+.experience-container-header-text::before,
+.experience-container-header-text::after,
+.education-container-header-text::before,
+.education-container-header-text::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 5px;
+    background-color: var(--yellow-theme-main-color);
+    bottom: -1px;
+}
+
+/* Positioning */
+.education-container-header-text::before,
+.experience-container-header-text::before {
+    left: 0;
+}
+
+.education-container-header-text::after,
+.experience-container-header-text::after {
+    right: 0;
+}
+
+/* Timeline Styling */
+.education-timeline,
+.experience-timeline {
+    padding: 0px 0px 30px 0px;
+}
+
+.education-timeline:last-child,
+.experience-timeline:last-child {
+    padding: 0px;
+}
+
+.each-experience {
+    display: flex;
+    align-items: center;
+}
+
+.each-experience h3,
+h4 {
+    font-size: 16px;
+}
+
+.each-experience h4 {
+    margin: 8px;
+}
+
+.each-experience-description {
+    font-size: 38px;
+}
+
+@media screen and (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .education-container,
+    .experience-container {
+        width: 100%;
+        gap: 2rem;
+    }
+}
