@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
 .home{
     position: relative;
     height: 100%;
@@ -17,10 +22,11 @@
     color: var(--yellow-theme-main2-color);
     font-weight: 500;
     line-height: 7rem;
-    font-size: 6rem;
+    font-size: 7rem;
     overflow: hidden;
     margin-top: 130px;
     white-space: nowrap;
+    font-family: 'Bebas Neue', sans-serif;
     animation: typingEffect 2s steps(30,end);
 }
 .contact{
