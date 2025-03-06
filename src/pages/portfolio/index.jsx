@@ -3,6 +3,7 @@ import Header from "../../components/Header"
 import image1 from "../../images/page1.png"
 import image2 from "../../images/page2.png"
 import image3 from "../../images/page3.png"
+import image4 from "../../images/page4.png"
 import { FaFileAlt } from "react-icons/fa";
 import { useState } from 'react'
 import './style.css'
@@ -20,6 +21,14 @@ const portfolioData = [
         image: image1,
         link: 'https://gen-z-xi.vercel.app/user/login'
     },
+    {
+        id: 3,
+        name: "Car Slider",
+        image: image4,
+        link: 'https://clinquant-phoenix-e829c9.netlify.app'
+    },
+
+
     {
         id: 2,
         name: "CRUD With Mysql",
