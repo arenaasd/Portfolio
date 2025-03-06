@@ -2,11 +2,18 @@ import React from "react";
 import Header from "../../components/Header"
 import image1 from "../../images/page1.png"
 import image2 from "../../images/page2.png"
+import image3 from "../../images/page3.png"
 import { FaFileAlt } from "react-icons/fa";
 import { useState } from 'react'
 import './style.css'
 
 const portfolioData = [
+    {
+        id: 2,
+        name: "Code Reviewer",
+        image: image3,
+        link: 'https://code-reviewer-ivory.vercel.app'
+    },
     {
         id: 2,
         name: "Gen-z Ecommerce",
